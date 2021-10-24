@@ -263,12 +263,12 @@
 
     <script type="text/javascript">
 
-        txt = "<p>Browser CodeName: " + navigator.appCodeName + "</p>";
-        txt += "<p>Browser Name: " + navigator.appName + "</p>";
-        txt += "<p>Browser Version: " + navigator.appVersion + "</p>";
+        txt = "<p>Browser Brand: " + navigator.userAgentData.brands[0].brand + "</p>";
+        txt += "<p>Browser Name: " + navigator.userAgentData.brands[1].brand + "</p>";
+        txt += "<p>Browser Version: " + navigator.userAgentData.brands[0].version + "</p>";
         txt += "<p>Cookies Enabled: " + navigator.cookieEnabled + "</p>";
-        txt += "<p>Platform: " + navigator.platform + "</p>";
-        txt += "<p>User-agent header: " + navigator.userAgent + "</p>";
+        txt += "<p>Platform: " + navigator.userAgentData.platform + "</p>";
+        txt += "<p>Mobile: " + navigator.userAgentData.mobile + "</p>";
 
         document.getElementById("browser-identification").innerHTML = txt;
 
