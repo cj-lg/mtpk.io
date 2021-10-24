@@ -1,17 +1,87 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
+    <title>MTPK I/O</title>
+    <base href="./" target="_self">
     <meta name="description" content="Mountain Peak (MTPK) Experimental development site.">
     <meta name="keywords" content="HTML, CSS, JavaScript, Develop, Experimental">
     <meta name="author" content="CJ LG">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mountain Peak</title>
-    <base href="./" target="_self">
+    <meta property="og:title" content="MTPK.io">
+    <meta property="og:url" content="https://mtpk.io/">
+    <meta property="og:image" content="icon.png">
+    <meta property="og:description" content="Mountain Peak - Privacy and Security Centric Project">
+    <meta property="og:site_name" content="MTPK.io - Mountain Peak I/O">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="water.css">
     <link rel="icon" type="image/png" href="icon.png">
-  </head>
-  <body>
-    Coming Soon.
-  </body>
+</head>
+
+<body>
+    <div>
+        <h1>Mountain Peak I/O</h1>
+        <br>
+        <h2>Coming Soon.</h2>
+        <br>
+        In Development.
+    </div>
+    <details>
+        <summary>My goal is to build a privacy centric website.</summary>
+        <p>
+            To build a privacy centric website, where data can be encrypted by the user and server.</p>
+        <p>
+            Users will have a choice of how they want their data to be stored on this site:
+        <ul>
+            <li>Level-0: Data is stored, and encrypted purely on this site. Data can be retrieved by admins. and Data will be
+                unencrypted when the user logs in.</li>
+            <li>Level-1: Some PII, such as the user's name, email, and phone number will only be encrypted at the site level. 
+                Other data is encrypted locally, and further encrypted on this site. Data can not be retrieved by admins. Data
+                will have to be decrypted
+                after the user logs into the site. If the user loses their decryption key, they will be unable to access
+                their data. Data loaded will retain its
+                original encryption set by the user.
+            </li>
+            <li>
+                Level-2: Some PII, such as the user's name will only be encrypted at the site level. All other data is encrypted 
+                locally. If the user forgets their password, they will be able to recover their password using a choice of their own. 
+                Depending on the user's choice, will determine what is encrypted only at the site level. All other data encrypted locally will 
+                be unable to be decrypted by the site, thus if the user forgets, or loses their decryption key, they will have to request to 
+                delete their data. Since the website will be unable to read your locally encrypted data, the data will still be served, but 
+                it will be encrypted.
+            </li>
+            <li>
+                Passwords will be further encrypted regardless of whether the user chooses to further encrypt their data
+                locally. The user's password will be encrypted by the site's system.
+            </li>
+        </ul>
+        </p>
+        <p>
+            Default data storage: All data will be encrypted at-rest, excluding the user's username, and user-id.
+            Data encrypted at-rest and only decrypted once the user is logged in.
+            Passwords will be further encrypted regardless of whether the user chooses to further encrypt their data
+            locally.
+        </p>
+        <p>
+            If the user so chooses, the data can be locally encrypted by the user, then additionally encrypted by the
+            server.
+            This gurantees that the data can not be accessed by any admins, including the site creator, myself.
+            This can be proven, where if you login to your user account, and your data is locally encrypted, data
+            retrieved
+            from the server will retain your encryption, and will be unreadible unless you import your local decryption
+            key.
+        </p>
+        <p>
+            If there is a legal issue of the data stored, all site admins (including myself), will be unable to view
+            locally
+            encrypted data, however, we will be able to erase said data. If the user loses their local decryption key,
+            they
+            will be unable to retrieve their data, unless they store a master key on the server (however that may ruin
+            the
+            point of locally encrypting data.)
+        </p>
+    </details>
+</body>
+<script src="script.js"></script>
+
 </html>
